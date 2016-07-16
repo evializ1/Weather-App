@@ -1,12 +1,12 @@
 require 'barometer'
 
-print('Enter your city:')
+puts "What city are you in?"
  location = gets.capitalize
  
-  def get_locations_weather(location)
+  def get_location_weather(location)
 	 barometer = Barometer.new(location).measure
 	 end
-	weather = get_locations_weather(location)
+	weather = get_location_weather(location)
 	 tomorrow = Time.now.strftime('%d').to_i + 1
 	weather.forecast.each do |forecast|
 	 day = forecast.starts_at.day
